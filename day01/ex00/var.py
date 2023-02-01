@@ -19,5 +19,5 @@ def my_var():
     print(f'{h} has a type {type(h)}')
     print(f'{i} has a type {type(i)}')
 
-
-my_var()
+if __name__ =='__main__':
+    my_var()

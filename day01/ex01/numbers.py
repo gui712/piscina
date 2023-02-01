@@ -4,7 +4,7 @@ def lerNUmeros():
     for numero in arquivo:
         conteudo = numero.split(',')
     for temp in conteudo:
-        print(temp)
+        print(temp.strip('\n'))
 
     arquivo.close()
     

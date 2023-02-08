@@ -1,6 +1,6 @@
 import sys
 
-def listCapitals(argv):
+def listCapitals(input_user):
     states = {
     "Oregon" : "OR",
     "Alabama" : "AL",
@@ -14,10 +14,9 @@ def listCapitals(argv):
     "CO": "Denver"
     }
 
-    if not(argv[1] in states):
-        print("Unknown state")
-        sys.exit()
-    print(capital_cities[states[argv[1]]])
+    if not(input_user in states):
+        sys.exit("Unknown state")
+    print(capital_cities[states[input_user]])
 
 
 
@@ -27,4 +26,4 @@ def listCapitals(argv):
 if __name__ == '__main__':
     if(len(sys.argv) != 2):
         sys.exit()
-    listCapitals(sys.argv)
+    listCapitals(sys.argv[1])

@@ -1,5 +1,5 @@
 import sys
-def listCities(argv):
+def listCities(input_user):
     states = {
     "Oregon" : "OR",
     "Alabama" : "AL",
@@ -13,12 +13,11 @@ def listCities(argv):
     "CO": "Denver"
     }
 
-    if not(argv[1] in capital_cities.values()):
-        print("Unknown capital city")
-        sys.exit()
+    if not(input_user in capital_cities.values()):
+        sys.exit("Unknown capital city")
 
     for key, value in capital_cities.items():
-        if(argv[1] == value):
+        if(input_user == value):
             new_value = key
 
     for key, value in states.items():
@@ -29,4 +28,4 @@ def listCities(argv):
 if __name__ == '__main__':
     if(len(sys.argv) != 2):
         sys.exit()
-    listCities(sys.argv)
+    listCities(sys.argv[1])

@@ -7,15 +7,24 @@ class Intern:
 
 
     class Coffee:
-             def __str__(self):
-                return f'This is the worst coffee you ever tasted.'
+        def __str__(self):
+            return f'This is the worst coffee you ever tasted.'
 
-    def work(self)
-        return                 
+    def work(self):
+        raise Exception('I’m just an intern, I can’t do that...')
+
+    def make_coffee(self):
+        Intern.Coffee()                     
 
 
 if __name__ == '__main__':
-    p1 = Intern('Gui')
-    p2 = Intern.Coffee()
+    p0 = Intern()
+    p1 = Intern('Mark')
+    
+    print(p0)
     print(p1)
-    print(p2)
+    try:
+        p0.work()
+    except Exception as e:
+        print(e)
+    print(p1.make_coffee())    

@@ -24,9 +24,9 @@ def curriculum(file):
 
 if __name__ == '__main__':
     if(len(sys.argv) != 2):
-        sys.exit("Quantidade de argumentos invalida ")
+        sys.exit("Invalid Number of Arguments")
     if not(sys.argv[1].endswith('.template')):
-        sys.exit("Extensão invalida")
+        sys.exit("Invalid Extension")
     if not(os.path.isfile(sys.argv[1])):
-        sys.exit("Arquivo não existe")    
+        sys.exit("File Does Not Exist")    
     curriculum(sys.argv[1])
